@@ -2,7 +2,7 @@
   "name": "masterminds/fortissimo-commons",
   "description": "Common commands for the Fortissimo framework.",
   "require": {
-      "php": ">=5.3.2",
+      "php": ">=5.3.2"
   },
   "authors": [
     {
