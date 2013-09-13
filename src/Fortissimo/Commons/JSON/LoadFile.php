@@ -45,7 +45,7 @@ class LoadFile extends \Fortissimo\Command\Base {
     $asArray = $this->param("outputAsArray", FALSE);
 
     $lines = file_get_contents($file, $useIncludePath, $streamContext);
-    $jsonData = json_decode($lines, $asArray, NULL, $opts);
+    $jsonData = json_decode($lines, $asArray);
 
     return $jsonData;
   }
