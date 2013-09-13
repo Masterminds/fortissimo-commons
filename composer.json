@@ -1,0 +1,21 @@
+{
+  "name": "masterminds/fortissimo-commons",
+  "description": "Common commands for the Fortissimo framework.",
+  "require": {
+      "php": ">=5.3.2",
+  },
+  "authors": [
+    {
+      "name": "Matt Butcher",
+      "email": "technosophos@gmail.com"
+    },
+    {
+      "name": "Matt Farina",
+      "email": "matt@mattfarina.com"
+    }
+  ],
+  "license": "MIT",
+  "autoload": {
+    "psr-0": { "Fortissimo\\Commons": "src/" }
+  }
+}
