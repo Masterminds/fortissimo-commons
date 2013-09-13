@@ -19,6 +19,9 @@ namespace Fortissimo\Commons\JSON;
  * - streamContext: (null) A PHP stream context for the file.
  * - outputAsArray: (false) Whether to parse the JSON data into an array 
  * instead of an object.
+ *
+ * Reserved for future:
+ *
  * - parserOpts: A bitmask of options to pass into the JSON decoder. See 
  * json_decode() for details.
  */
@@ -32,7 +35,7 @@ class LoadFile extends \Fortissimo\Command\Base {
         ->whichHasDefault(FALSE)
       ->usesParam("outputAsArray", "Return the data as an array instead of an object (default: False)")
         ->whichHasDefault(FALSE)
-      ->usesParam("parserOptions", "Bitmask options to pass to json_decode.")->whichHasDefault(NULL)
+      // ->usesParam("parserOptions", "Bitmask options to pass to json_decode.")->whichHasDefault(NULL)
       ;
   }
 
