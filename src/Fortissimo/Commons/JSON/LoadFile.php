@@ -14,6 +14,7 @@ namespace Fortissimo\Commons\JSON;
  *
  * Params:
  * - filename: (required) The name of the file to load.
+ * - basedir: The base directory to prepend to the filename. This allows using relative paths.
  * - useIncludePath: (false) Whether to use the include path when 
  * searching for the file.
  * - streamContext: (null) A PHP stream context for the file.
@@ -30,6 +31,7 @@ class LoadFile extends \Fortissimo\Command\Base {
     return $this
       ->description("Load a file and try to parse it as JSON.")
       ->usesParam("filename", "The full path to the file.")->whichIsRequired()
+      ->usesParam("basedir", "The base directory to prepend to filename.")
       ->usesParam("streamContext", "An optional stream context to be passed into the file reader.")
       ->usesParam("useIncludePath", "Whether to search the include path for the file.")
         ->whichHasDefault(FALSE)
@@ -41,8 +43,13 @@ class LoadFile extends \Fortissimo\Command\Base {
 
   public function doCommand() {
     $file = $this->param("filename");
+    $basedir = $this->param('basedir');
     $useIncludePath = $this->param("useIncludePath", FALSE);
     $streamContext = $this->param("streamContext", NULL);
+
+    if (!empty($basedir)) {
+      $file = $basedir . '/' . $file;
+    }
 
     $opts = $this->param("parserOptions", NULL);
     $asArray = $this->param("outputAsArray", FALSE);
