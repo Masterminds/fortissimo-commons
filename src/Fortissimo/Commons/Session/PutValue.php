@@ -18,7 +18,7 @@ class PutValue extends \Fortissimo\Command\Base {
 
   public function doCommand() {
     $name = $this->param('name');
-    $val = $this->param('value', NULL);
+    $value = $this->param('value', NULL);
 
     $_SESSION[$name] = $value;
   }
