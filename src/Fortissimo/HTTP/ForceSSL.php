@@ -6,7 +6,9 @@ class ForceSSL extends \Fortissimo\Command\Base {
   public function expects() {
     return $this
       ->description("Force the client to use SSL to access this route.")
-      ->usesParam('force', 'If this is true, the redirect is forced. Otherwise, we silently continue.')->whichHasDefault(TRUE)
+      ->usesParam('force', 'If this is true, the redirect is forced. Otherwise, noop.')
+        ->withFilter('boolean')
+        ->whichHasDefault(TRUE)
       ->andReturns("Nothing. Issues a 301 redirect.")
       ;
   }
