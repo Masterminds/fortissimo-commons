@@ -8,12 +8,12 @@ class ForceSSL extends \Fortissimo\Command\Base {
       ->description("Force the client to use SSL to access this route.")
       ->usesParam('force', 'If this is true, the redirect is forced. Otherwise, noop.')
         ->withFilter('boolean')
-        ->whichHasDefault(TRUE)
+        ->whichHasDefault('TRUE')
       ->andReturns("Nothing. Issues a 301 redirect.")
       ;
   }
   public function doCommand() {
-    if ($this->param('force') === TRUE) {
+    if ($this->param('force') !== TRUE) {
       return;
     }
     if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] == 'off') {
