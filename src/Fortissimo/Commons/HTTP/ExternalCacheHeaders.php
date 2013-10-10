@@ -9,7 +9,7 @@
  *
  * Created by Matt Butcher on 2011-03-03.
  */
-namespace Fortissimo\Command\HTTP;
+namespace Fortissimo\Commons\HTTP;
 /**
  * Provide cache control headers for Fortissimo.
  *

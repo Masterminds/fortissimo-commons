@@ -4,7 +4,7 @@
  *
  * @author mbutcher
  */
-namespace Fortissimo\Command\HTTP;
+namespace Fortissimo\Commons\HTTP;
 /**
  * Issue a redirect.
  *
