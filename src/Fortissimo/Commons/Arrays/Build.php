@@ -1,5 +1,5 @@
 <?php
-namespace Fortissimo\Commons;
+namespace Fortissimo\Commons\Arrays;
 /**
  * Create a new array (associative or indexed).
  *
@@ -15,7 +15,7 @@ namespace Fortissimo\Commons;
  * - Any name becomes a key, and any value becomes that key's value.
  *
  * Example:
- * ->does('BuildArray', 'myData')
+ * ->does('Build', 'myData')
  * ->using('foo', 'bar)
  * ->using('baz')->from('get:baz')
  *
@@ -27,7 +27,7 @@ namespace Fortissimo\Commons;
  *   'baz' => '123'
  * );
  */
-class BuildArray implements \Fortissimo\Command, \Fortissimo\Explainable {
+class Build implements \Fortissimo\Command, \Fortissimo\Explainable {
   protected $name, $caching;
 
   public function __construct($name, $caching = TRUE) {

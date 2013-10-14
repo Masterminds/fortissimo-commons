@@ -1,5 +1,5 @@
 <?php
-namespace Fortissimo\Commons;
+namespace Fortissimo\Commons\Arrays;
 /**
  * Extract values from a given array and put them into the context.
  *
@@ -11,7 +11,7 @@ namespace Fortissimo\Commons;
  * - prefix: If set, this string will be prepended to each key before the key is put into context.
  *
  * Example:
- * ->does('FromArray', 'myData')
+ * ->does('Extract', 'myData')
  * ->using('array', array('foo' => 'bar', 'baz' => '123', 'another' => 'test'))
  * ->using('keys', array('foo', 'baz')
  *
@@ -26,7 +26,7 @@ namespace Fortissimo\Commons;
  * The 'prefix' parameter can be used to avoid context collisions with existing names.
  *
  */
-class FromArray extends \Fortissimo\Command\Base {
+class Extract extends \Fortissimo\Command\Base {
   public function expects() {
     return $this
       ->description('Extract data from an array into the context.')
