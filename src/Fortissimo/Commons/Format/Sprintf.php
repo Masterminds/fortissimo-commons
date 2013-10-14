@@ -41,7 +41,7 @@ class Sprintf implements \Fortissimo\Command, \Fortissimo\Explainable {
         $pos[(int)$name] = $value;
       }
     }
-    $this->context->add($this->name, vsprintf($format, $pos));
+    $cxt->add($this->name, vsprintf($format, $pos));
   }
 
   public function explain() {
