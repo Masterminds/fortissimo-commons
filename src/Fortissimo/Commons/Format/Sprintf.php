@@ -1,5 +1,5 @@
 <?php
-namespace Fortissimo\Commons;
+namespace Fortissimo\Commons\format;
 /**
  * Run various arguments through sprintf() and put the results in the context.
  *
