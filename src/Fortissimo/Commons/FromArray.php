@@ -37,13 +37,11 @@ class FromArray extends \Fortissimo\Command\Base {
       ;
   }
   public function doCommand() {
-    $this->context->log("GOT HERE", 'debug');
     $array = $this->param('array');
     $keys = $this->param('keys');
     $prefix = $this->param('prefix', '');
 
     foreach ($keys as $key) {
-      $this->context->log("Looking for $key in $array.", "debug");
       $val = isset($array[$key]) ? $array[$key] : NULL;
       $this->context->add($prefix . $key, $val);
     }
