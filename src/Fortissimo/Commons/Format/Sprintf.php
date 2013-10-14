@@ -28,7 +28,7 @@ class Sprintf implements \Fortissimo\Command, \Fortissimo\Explainable {
   }
 
   public function execute($params, \Fortissimo\ExecutionContext $cxt) {
-    $format = '';
+    $format = 'No Format';
     $pos = array();
     foreach ($params as $name => $value) {
       if ($name == 'format') {
