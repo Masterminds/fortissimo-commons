@@ -5,13 +5,15 @@ namespace Fortissimo\Commons\format;
  *
  * Params:
  * - format: The format string, e.g. "Hello %s"
- * - 0...n: Numeric indexes are sent into sprintf.
+ * - 1...n: Numeric indexes are sent into sprintf.
+ *
+ * IMPORTANT: The index starts with 1, not zero. (Zero is reserved for the filter.)
  *
  * Example:
  * ->does('sprintf', 'sprintf')
  * ->using('format', 'My name is %s and my favorite digit is %d')
- * ->using('0', 'Matt')
- * ->using('1', '7')
+ * ->using('1', 'Matt')
+ * ->using('2', '7')
  *
  * The above will add `sprintf` to the context with the value 'My name is Matt and my favorite digit is 7'.
  */
