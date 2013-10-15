@@ -23,7 +23,7 @@ class EchoJSON extends \Fortissimo\Command\Base {
       ->description('Echo the contents of the "text" parameter to standard output.')
       ->usesParam('headers', 'Other HTTP headers to set. This should be an indexed array of header strings, e.g. array("Location: http://example.com").')
       ->usesParam('options', 'A bitmask of JSON options. See json_encode().')
-      ->usesParam('text', 'The text to echo.')
+      ->usesParam('object', 'The object to convert to JSON and echo.')
       //->withFilter('string')
       ;
   }
