@@ -4,7 +4,9 @@ Common commands for the [Fortissimo
 Framework](https://github.com/masterminds/fortissimo).
 
 This project focuses on collecting common commands that are used within
-Fortissimo applications.
+Fortissimo applications. For an overview of all of the commands in this
+library, read
+[An Overview of Fortissimo Commons](http://technosophos.com/2013/11/22/an-overview-of-fortissimo-commons.html).
 
 ## Usage
 
