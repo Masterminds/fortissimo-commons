@@ -58,7 +58,7 @@ class EchoJSON extends \Fortissimo\Command\Base {
     return $this->_stripNulls($obj);
   }
 
-  protected function _stripNulls(&$obj) {
+  protected function _stripNulls($obj) {
     foreach ($obj as $n => $v) {
       if (is_null($v)) {
         unset($obj[$n]);
@@ -70,5 +70,6 @@ class EchoJSON extends \Fortissimo\Command\Base {
         $obj[$n] = $this->_stripNulls($v);
       }
     }
+    return $obj;
   }
 }
